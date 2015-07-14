@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GBK" standalone="no"?>
+<jardesc>
+    <jar path="C:/Documents and Settings/jude/桌面/monkeyrunner.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/HwhRunner/description.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" mainClassHandleIdentifier="=HwhRunner/src&lt;com.android.monkeyrunner{MonkeyRunnerStarter.java[MonkeyRunnerStarter" manifestLocation="/HwhRunner/manifest" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <folder path="/HwhRunner/libs"/>
+        <file path="/HwhRunner/.classpath"/>
+        <file path="/HwhRunner/.project"/>
+        <javaElement handleIdentifier="=HwhRunner/src"/>
+    </selectedElements>
+</jardesc>
