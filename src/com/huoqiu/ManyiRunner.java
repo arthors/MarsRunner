@@ -1,4 +1,4 @@
-package com.hwh;
+package com.huoqiu;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -9,7 +9,7 @@ import com.android.monkeyrunner.core.IMonkeyDevice;
 import com.android.monkeyrunner.core.TouchPressType;
 import com.android.monkeyrunner.recorder.MonkeyRecorderFrame;
 
-public class HwhRunner {
+public class ManyiRunner {
 	private static IMonkeyDevice device;
 	private static AdbBackend adb;
 	private static final Object LOCK = new Object();
@@ -20,7 +20,7 @@ public class HwhRunner {
 			device = adb.waitForConnection();
 		}
 		
-		HwhRecorderFrame frame = new HwhRecorderFrame(device);
+		ManyiRecorderFrame frame = new ManyiRecorderFrame(device);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.addWindowListener(new WindowAdapter() {
             @Override

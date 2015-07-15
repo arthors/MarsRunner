@@ -62,7 +62,7 @@ public class ActionListModel extends AbstractListModel {
     public void export(File selectedFile) throws FileNotFoundException {
         PrintWriter out = new PrintWriter(selectedFile);
         for (Action a : actionList) {
-            out.println(a.serialize());
+            out.println(a.serialize() + "\r\nWAIT|{'seconds':5.0,}");
         }
         out.close();
     }

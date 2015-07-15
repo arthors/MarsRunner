@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.hwh;
+package com.huoqiu;
 
 import com.android.monkeyrunner.MonkeyDevice;
 import com.android.monkeyrunner.core.IMonkeyImage;
@@ -58,8 +58,8 @@ import javax.swing.Timer;
 /**
  * MainFrame for MonkeyRecorder.
  */
-public class HwhRecorderFrame extends JFrame {
-	private static final Logger LOG = Logger.getLogger(HwhRecorderFrame.class.getName());
+public class ManyiRecorderFrame extends JFrame {
+	private static final Logger LOG = Logger.getLogger(ManyiRecorderFrame.class.getName());
 
 	private final IMonkeyDevice device;
 
@@ -105,7 +105,7 @@ public class HwhRecorderFrame extends JFrame {
 	/**
 	 * This is the default constructor
 	 */
-	public HwhRecorderFrame(IMonkeyDevice device) {
+	public ManyiRecorderFrame(IMonkeyDevice device) {
 		this.device = device;
 		initialize();
 	}
@@ -119,7 +119,7 @@ public class HwhRecorderFrame extends JFrame {
 
 		this.setSize(devImageWith, devImageHeight);
 		this.setContentPane(getJContentPane());
-		this.setTitle("HwhRecorder");
+		this.setTitle("ManyiRecorder");
 
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
@@ -133,19 +133,15 @@ public class HwhRecorderFrame extends JFrame {
 	private void refreshDisplay() {
 		IMonkeyImage snapshot = device.takeSnapshot();
 		currentImage = snapshot.createBufferedImage();
-
 		Graphics2D g = scaledImage.createGraphics();
 		g.drawImage(currentImage, 0, 0, scaledImage.getWidth(), scaledImage.getHeight(), null);
 		g.dispose();
-
 		display.setIcon(new ImageIcon(scaledImage));
-
 		pack();
 	}
 
 	/**
 	 * This method initializes jContentPane
-	 *
 	 * @return javax.swing.JPanel
 	 */
 	private JPanel getJContentPane() {
@@ -297,10 +293,6 @@ public class HwhRecorderFrame extends JFrame {
 		if (actionPanel == null) {
 			actionPanel = new JPanel();
 			actionPanel.setLayout(new BoxLayout(getActionPanel(), BoxLayout.X_AXIS));
-			// actionPanel.add(getWaitButton(), null);
-			// actionPanel.add(getPressButton(), null);
-			// actionPanel.add(getTypeButton(), null);
-			// actionPanel.add(getFlingButton(), null);
 			actionPanel.add(getExportActionButton(), null);
 			// actionPanel.add(getRefreshButton(), null);
 		}
@@ -363,9 +355,6 @@ public class HwhRecorderFrame extends JFrame {
 			int dx = x - prePressedX;
 			int dy = y - prePressedY;
 			if (Math.abs(dx) < 15 && Math.abs(dy) < 15) {
-				// addAction(new TouchAction(prePressedX, prePressedY,
-				// MonkeyDevice.DOWN));
-				// addAction(new TouchAction(x, y, MonkeyDevice.UP));
 				break;
 			}
 			if (Math.abs(dx) > Math.abs(dy)) {
